@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multimedia Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <!-- Link ke CSS utama -->
+    <style>
+      /* Custom CSS untuk meningkatkan estetika */
+      .card {
+        transition: transform 0.3s ease-in-out;
+      }
+      .card:hover {
+        transform: scale(1.05);
+      }
+      .card-img-overlay {
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        transition: background 0.3s;
+      }
+      .card:hover .card-img-overlay {
+        background: rgba(0, 0, 0, 0.7);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar-container"></div>
+
+    <!-- Videography Section -->
+    <section class="py-5 bg-dark text-light">
+      <div class="container">
+        <h2 class="text-center mb-4">Videography</h2>
+        <p class="text-center mb-5">
+          Take a look at my video projects, where I explore cinematic
+          perspectives and storytelling.
+        </p>
+        <div class="row">
+          <!-- Video Project 1 -->
+          <div class="col-md-6 mb-4">
+            <div class="card bg-dark text-white">
+              <video class="card-img" controls muted>
+                <source src="media/video1.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div
+                class="card-img-overlay d-flex flex-column justify-content-end"
+              >
+                <h5 class="card-title">Video Project 1</h5>
+                <p class="card-text">
+                  A cinematic experience showcasing unique perspectives.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video Project 2 -->
+          <div class="col-md-6 mb-4">
+            <div class="card bg-dark text-white">
+              <video class="card-img" controls muted>
+                <source src="media/video2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div
+                class="card-img-overlay d-flex flex-column justify-content-end"
+              >
+                <h5 class="card-title">Video Project 2</h5>
+                <p class="card-text">Exploring light and shadow in motion.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photography Section -->
+    <section class="py-5 bg-light text-dark">
+      <div class="container">
+        <h2 class="text-center mb-4">Photography</h2>
+        <p class="text-center mb-5">
+          Discover my photography projects, capturing moments and details in
+          unique ways.
+        </p>
+        <div class="row">
+          <!-- Photography Project 1 -->
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="../images/p1.png"
+                class="card-img-top"
+                alt="Photography Project 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Photography Project 1</h5>
+                <p class="card-text">
+                  Capturing nature's beauty through the lens.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photography Project 2 -->
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="../images/p2.png"
+                class="card-img-top"
+                alt="Photography Project 2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Photography Project 2</h5>
+                <p class="card-text">
+                  A close-up look into urban life and architecture.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photography Project 3 -->
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="../images/p3.png"
+                class="card-img-top"
+                alt="Photography Project 3"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Photography Project 3</h5>
+                <p class="card-text">
+                  Exploring landscapes with a unique perspective.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script>
+      // Memuat navbar
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-container").innerHTML = data;
+        });
+
+      // Memuat footer
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
