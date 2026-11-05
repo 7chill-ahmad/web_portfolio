@@ -1,0 +1,86 @@
+/* =========================================================
+   AHMAD NUR KHOLILY — THEME CONTRAST LAYER
+   Loaded after styles.css and navbar.css.
+   Brand colours and established layout remain unchanged.
+   ========================================================= */
+
+:root {
+  --color-red: #D92736;
+  --color-red-dark: #B91F2C;
+  --color-navy: #142B50;
+  --color-white: #FFFFFF;
+  --color-bg: #F7F8FA;
+  --color-surface: #FFFFFF;
+  --color-card: #FFFFFF;
+  --color-text: #172033;
+  --color-muted: #5F6878;
+  --color-border: #D5DAE3;
+  --color-accent: #D92736;
+  --color-on-navy: #FFFFFF;
+  --navbar-bg: rgba(247, 248, 250, 0.96);
+  --navbar-text: #172033;
+  --shadow: 0 12px 35px rgba(20, 43, 80, 0.10);
+}
+
+body.dark-mode {
+  --color-bg: #101722;
+  --color-surface: #172231;
+  --color-card: #172231;
+  --color-text: #F1F4F8;
+  --color-muted: #A6B0C0;
+  --color-border: #354357;
+  --color-red: #D92736;
+  --color-red-dark: #B91F2C;
+  --color-navy: #142B50;
+  --color-white: #FFFFFF;
+  --color-accent: #D92736;
+  --color-on-navy: #FFFFFF;
+  --navbar-bg: rgba(16, 23, 34, 0.96);
+  --navbar-text: #F1F4F8;
+  --shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+}
+
+/* Clearer separation between light surfaces and page background. */
+body:not(.dark-mode) .skill-card,
+body:not(.dark-mode) .app-card,
+body:not(.dark-mode) .project-card,
+body:not(.dark-mode) .education-card,
+body:not(.dark-mode) .fact-item,
+body:not(.dark-mode) .gallery-item,
+body:not(.dark-mode) .interest-card,
+body:not(.dark-mode) .tech-tag {
+  border-color: #D5DAE3;
+}
+
+body:not(.dark-mode) input,
+body:not(.dark-mode) textarea,
+body:not(.dark-mode) select {
+  border-color: #C8CFDA;
+}
+
+body:not(.dark-mode) .text-muted,
+body:not(.dark-mode) .text-secondary {
+  color: #5F6878 !important;
+}
+
+/* Deep Navy sections remain Deep Navy in both themes. */
+.contact-section,
+.education-section,
+.workflow-section,
+.bg-navy,
+.navy-section {
+  background-color: #142B50;
+  color: #FFFFFF;
+}
+
+.contact-section a {
+  text-decoration: none;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 1px;
+}
+
+.contact-section a:hover,
+.contact-section a:focus-visible {
+  text-decoration: underline;
+  text-decoration-color: #D92736;
+}

@@ -199,6 +199,27 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   /* =====================================================
+       07B. SHARED IMAGE FALLBACK
+       ===================================================== */
+
+  // Keep cards visually intentional when an optional portfolio image
+  // has not been added yet. This also works for images loaded later.
+  document.addEventListener('error', function (event) {
+    const image = event.target;
+    if (!(image instanceof HTMLImageElement)) return;
+
+    const container = image.closest(
+      '.portfolio-image, .gallery-image, .project-visual, ' +
+      '.project-card-image, .album-cover, .video-thumbnail, .profile-image'
+    );
+
+    if (container) {
+      image.style.display = 'none';
+      container.classList.add('image-placeholder');
+    }
+  }, true);
+
+  /* =====================================================
        08. PREVENT EMPTY SOCIAL LINKS
        ===================================================== */
 
